@@ -1,2 +1,2 @@
-# Criando-Relatorios-com--iReport
+# Criando-Relatorios-com-iReport
 Gerando relatórios com Java utilizando  iReport
