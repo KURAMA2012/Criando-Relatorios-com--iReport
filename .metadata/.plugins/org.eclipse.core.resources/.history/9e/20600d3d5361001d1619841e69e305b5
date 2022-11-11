@@ -1,0 +1,25 @@
+package com.example.estudos.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
+import service.UsuarioService;
+
+@RestController
+public class RelatorioController {
+	
+	@Autowired
+	UsuarioService usuarioService;
+	
+	
+	@GetMapping("/pdf")
+	public String generatePdf() {
+		
+		JRBeanCollectionDataSource jRBeanCollectionDataSource = new JRBeanCollectionDataSource(usuarioService.listarUsuarios());
+		
+		return null;
+	}
+
+}

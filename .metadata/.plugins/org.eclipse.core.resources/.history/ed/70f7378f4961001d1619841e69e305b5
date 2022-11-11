@@ -1,0 +1,21 @@
+package com.example.estudos.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.estudos.domain.Usuario;
+import com.example.estudos.repository.UsuarioRepository;
+
+@RestController
+@RequestMapping("/usuarios")
+public class UsuarioController {
+	
+	@Autowired
+	UsuarioRepository usuarioRepository;
+	
+	public list<Usuario> listar(){
+		return usuarioRepository.findAll(); 
+	}
+
+}
